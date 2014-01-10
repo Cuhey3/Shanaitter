@@ -1,0 +1,2 @@
+if exist C:\doi\mongodb-win32-i386-1.8.5\dbpath\mongod.lock del C:\doi\mongodb-win32-i386-1.8.5\dbpath\mongod.lock
+start /MIN C:\doi\mongodb-win32-i386-1.8.5\bin\mongod.exe --dbpath C:\doi\mongodb-win32-i386-1.8.5\dbpath --rest -jsonp

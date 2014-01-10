@@ -1,5 +1,5 @@
 function start() {
-    domain = "http://192.168.1.42";
+    domain = "http://localhost";
     tweets = null;
     currentTweet = "";
     username = null;
@@ -122,7 +122,7 @@ function postTweet(scope) {
     } else if (username === "testuser") {
         alert("テストユーザーでは発言できません。\nログインしなおしてください。");
         return false;
-    } else if (decodeURI(tweets[tweets.length - 1].tweet) === twVal || currentTweet === twVal) {
+    } else if (tweets[tweets.length - 1] && decodeURI(tweets[tweets.length - 1].tweet) === twVal || currentTweet === twVal) {
         alert("二重投稿です。");
         return false;
     } else {
@@ -144,7 +144,7 @@ function postTweet(scope) {
 }
 
 function checkTweets() {
-    oJsr1 = new JSONscriptRequest(domain + ':28017/test/tweets/?skip=299&jsonp=callback1');
+    oJsr1 = new JSONscriptRequest(domain + ':28017/test/tweets/?jsonp=callback1');
     oJsr1.buildScriptTag();
     oJsr1.addScriptTag();
 }
@@ -299,7 +299,7 @@ function logOutLink() {
 }
 
 function callback1(data) {
-    if (tweets[tweetsSize - 1]["_id"]["$oid"] !== data.rows[0]["_id"]["$oid"]) {
+    if (tweets[tweets.length - 1]["_id"]["$oid"] !== data.rows[0]["_id"]["$oid"]) {
         getTweets();
     }
     oJsr1.removeScriptTag();
@@ -310,8 +310,8 @@ function callback2(data) {
             && nextVisibleTweet(tweets) !== nextVisibleTweet(data.rows)) {
         var sh = new ActiveXObject("WScript.Shell");
         var message = decodeURI(nextVisibleTweet(data.rows));
-        if(message.length > 80){
-            message = message.substr(0,80) + "...";
+        if (message.length > 80) {
+            message = message.substr(0, 80) + "...";
         }
         sh.Run('msg Console /time:1800 "■' + nextVisibleTweet(data.rows, true) + 'さんより発言がありました。\n\n' + message + '"', 0, true);
         sh = null;
