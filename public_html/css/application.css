@@ -1,0 +1,37 @@
+body {background-color: #C0DEED;font-family:'メイリオ','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Meiryo,'ＭＳ Ｐゴシック',sans-serif;font-size:12px;min-height:1200px;}
+a{text-decoration: none;}
+dd{padding:3px;background-color: #ffffff;margin-left:5px;}
+dl{padding: 2px;border: 1px solid #777;margin:5px;}
+h2 {font-size:24px;}
+#tweets .time {font-size:14px;float:right;padding-right:3px;color:gray;font-style:normal;}
+#tweets .italic {font-size:14px;float:right;padding-right:3px;color:black;font-style:italic;}
+#tweets .tweetleft{float: left;background-color: #FFD4D4;width:80%;margin-left:8px;margin-top:8px;margin-bottom:0px;}
+#tweets .tweetright{float:right;background-color: #D4D4FF;width:80%;margin-right:8px;margin-top:8px;margin-bottom:0px;}
+#tweets .hide{display:none;}
+#content {margin-left:5px;width:830px;min-width:830px;height:100%;overflow: hidden;}
+#shout{margin:4px;float:left;height:30px;width:300px;}
+#title {float: left;}
+#tweet{height:90px;width:630px;}
+#tweets{width:645px;background-color: #eee;clear:left;overflow: hidden;margin-left:3px;}
+#version_alert{color:gray;clear:right;float:right;cursor:pointer;}
+#version_alert:hover {color:blue;}
+#users{float:right;background-color: #E6FFE6;padding:7px 10px 7px 15px;border:1px solid #999;width:130px;min-width: 130px; margin-right:15px;}
+#visibleconfig{clear:right;float:right;width:156px;height:24px;margin-right:15px;margin-top:3px;}
+#infoconfig{clear:right;float:right;width:156px;height:24px;margin-right:15px;margin-top:3px;}
+#mailinfo{clear:right;float:right;width:156px;height:24px;margin-right:15px;margin-top:3px;}
+#users .u{padding-left:7px;}
+#version {float: right;}
+#wisp{margin:4px;float:left;height:30px;width:300px;}
+#wrap {margin-left:auto;margin-right:auto;width:830px;height:100%;background-color: #D3E8F2;overflow: hidden;}
+#postarea {float:left;width:630px;margin-left:10px;}
+#tweets .author {float: left;padding-left: 3px;}
+#tweets dd {clear:both;}
+#users .time {text-align:left;padding-left:12px; color:#666;}
+#modal{display:none;}
+#modalBody{position: fixed; z-index:1000; background-color: #CCC; width:350px; left:50%; top:50%;}
+#modalBK{position: fixed; z-index:999; height:100%; width:100%;background-color:#000; opacity: 0.85;filter: alpha(opacity=85);-moz-opacity:0.85;}
+#modalBody th{height : 25px;overflow: hidden;vertical-align: middle;font-size:14px;color:#333;}
+#modalBody td{height : 25px;width:130px;overflow: hidden;vertical-align: middle;font-size:14px;color:#333;cursor:pointer;}
+#modalTable {margin-left:30px;}
+#modalMessage {margin:5px 10px;font-size:20px;}
+#modalBody .user:hover{font-size: 16px; color: blue;}
