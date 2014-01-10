@@ -1,4 +1,4 @@
-﻿function start() {
+function start() {
     domain = "http://192.168.1.42";
     tweets = null;
     currentTweet = "";
